@@ -14,7 +14,7 @@ export class RegistrationFormComponent {
 
   createStudent() {
     // Parse the dob string and create a Date object
-    const [year, month, day] = this.dob.split('/');
+    const [year, month, day] = this.dob.split('-');
     const dobDate = new Date(Number(year), Number(month) - 1, Number(day));
 
     const data = { name: this.name, dob: dobDate }; // Use the Date object for dob
